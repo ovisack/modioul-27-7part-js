@@ -29,11 +29,13 @@ console.log(balance);
 //step-5: add addMoneyInput with balance 
 const addMoneyNumber =parseFloat(addMoneyInput);
 const balanceNumber = parseFloat(balance);
-const newBalance = balanceNumber - addMoneyNumber;
+if(balanceNumber > 0){
+    const newBalance =balanceNumber  - addMoneyNumber;
 console.log(newBalance);
 
 // step-6: update tto balance in the Ui / dom
 document.getElementById('account-balance').innerText=newBalance;
+}
 
 
 }
